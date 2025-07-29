@@ -1,0 +1,110 @@
+<!--?xml version='1.0' encoding='iso-8859-1' standalone='no'?-->
+<svg id="svg" viewBox="0 0 600 600" width="600" height="600" x="0" y="0" onmouseup="add(evt)" onmousedown="grab(evt)" onmousemove="null" xmlns="http://www.w3.org/2000/svg">
+	<title>DeepVenn - Create Area-Proportional Venn Diagrams Using Deep Learning</title>
+	<desc><!-- Created by DeepVenn (C) 2020 - 2025 Tim Hulsen //--></desc>
+	<script>
+	
+	var Root=document.getElementById('svg')
+	standardize(Root)
+	function standardize(R){
+		var Attr={
+			'onmouseup':'add(evt)',
+			'onmousedown':'grab(evt)',
+			'onmousemove':null
+		}
+		assignAttr(R,Attr)
+	}
+	function grab(evt){
+		var O=evt.target
+		var Attr={
+			'onmousemove':'slide(evt,"'+O.id+'")',
+			'onmouseup':'standardize(Root)'
+		}
+		assignAttr(Root,Attr)
+	}
+	function slide(evt,id){
+		if(id.substring(0,5)=='title'||id.substring(0,4)=='text'){
+			var o=document.getElementById(id)
+			o.setAttributeNS(null,'x',evt.clientX)
+			o.setAttributeNS(null,'y',evt.clientY)
+		}
+	}
+	function assignAttr(O,A){
+		for (i in A) O.setAttributeNS(null,i,A[i])
+	}
+	
+	</script>
+	<rect id="rect" x="0" y="0" width="600" height="600" style="fill:#FFFFFF"></rect>
+	<text id="title_main" x="50%" y="30" font-size="25px" font-family="Verdana" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">sc85_3g</text>
+	<text id="title_sub" x="50%" y="50" font-size="15px" font-family="Verdana" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move"></text>
+	<circle id="circle_F" r="197.36386366155426" cx="268.58651009898267" cy="257.36386366155426" style="fill:#00FFFF;opacity:.5"></circle>
+	<circle id="circle_D" r="166.0015068066771" cx="329.2271622349102" cy="273.8274032617784" style="fill:#FFFF00;opacity:.5"></circle>
+	<circle id="circle_A" r="162.9595149250336" cx="365.817838637538" cy="251.33511640472503" style="fill:#FF0000;opacity:.5"></circle>
+	<circle id="circle_C" r="118.86648301682175" cx="400.2055825658862" cy="305.82298717663787" style="fill:#0000FF;opacity:.5"></circle>
+	<circle id="circle_E" r="82.97825692551557" cx="413.42180241319954" cy="374.85031127206685" style="fill:#FF00FF;opacity:.5"></circle>
+	<circle id="circle_B" r="149.9775762727985" cx="269.9678302323142" cy="450.02242372720144" style="fill:#00FF00;opacity:.5"></circle>
+	<text id="title_F" x="123.5" y="209.5" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">COMPOSITE</text>
+	<text id="title_D" x="182.5" y="266.5" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">Vaeda</text>
+	<text id="title_A" x="302.5" y="146.5" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">scDblFinder</text>
+	<text id="title_C" x="397.5" y="218.5" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">DoubletDetection</text>
+	<text id="title_E" x="416.5" y="331.5" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">Scrublet</text>
+	<text id="title_B" x="292.5" y="500.5" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">DoubletFinder</text>
+	<text id="text_A" x="480" y="165" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">107</text>
+	<text id="text_AB" x="undefined" y="undefined" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">30</text>
+	<text id="text_ABC" x="undefined" y="undefined" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">10</text>
+	<text id="text_ABCD" x="undefined" y="undefined" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">6</text>
+	<text id="text_ABCDE" x="405" y="405" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">9</text>
+	<text id="text_ABCDEF" x="365" y="380" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">71</text>
+	<text id="text_ABCDF" x="310" y="335" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">77</text>
+	<text id="text_ABCE" x="undefined" y="undefined" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">7</text>
+	<text id="text_ABCEF" x="undefined" y="undefined" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">5</text>
+	<text id="text_ABCF" x="undefined" y="undefined" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">10</text>
+	<text id="text_ABD" x="undefined" y="undefined" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">11</text>
+	<text id="text_ABDE" x="undefined" y="undefined" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">1</text>
+	<text id="text_ABDEF" x="340" y="410" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">16</text>
+	<text id="text_ABDF" x="255" y="330" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">159</text>
+	<text id="text_ABEF" x="undefined" y="undefined" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">6</text>
+	<text id="text_ABF" x="undefined" y="undefined" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">39</text>
+	<text id="text_AC" x="505" y="305" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">48</text>
+	<text id="text_ACD" x="480" y="280" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">99</text>
+	<text id="text_ACDE" x="465" y="340" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">29</text>
+	<text id="text_ACDEF" x="414.5" y="351.5" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">88</text>
+	<text id="text_ACDF" x="395" y="240" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">305</text>
+	<text id="text_ACE" x="485" y="350" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">7</text>
+	<text id="text_ACEF" x="undefined" y="undefined" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">3</text>
+	<text id="text_ACF" x="undefined" y="undefined" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">21</text>
+	<text id="text_AD" x="465" y="195" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">72</text>
+	<text id="text_ADE" x="undefined" y="undefined" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">9</text>
+	<text id="text_ADEF" x="undefined" y="undefined" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">36</text>
+	<text id="text_ADF" x="300" y="165" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">378</text>
+	<text id="text_AE" x="undefined" y="undefined" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">7</text>
+	<text id="text_AEF" x="undefined" y="undefined" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">3</text>
+	<text id="text_AF" x="365" y="100" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">109</text>
+	<text id="text_B" x="290" y="525" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">749</text>
+	<text id="text_BC" x="undefined" y="undefined" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">4</text>
+	<text id="text_BCDE" x="405" y="415" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">1</text>
+	<text id="text_BCDEF" x="375" y="420" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">3</text>
+	<text id="text_BCDF" x="undefined" y="undefined" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">7</text>
+	<text id="text_BCE" x="415" y="420" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">2</text>
+	<text id="text_BCF" x="undefined" y="undefined" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">5</text>
+	<text id="text_BD" x="355" y="435" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">24</text>
+	<text id="text_BDEF" x="360" y="425" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">7</text>
+	<text id="text_BDF" x="215" y="360" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">75</text>
+	<text id="text_BE" x="400" y="440" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">16</text>
+	<text id="text_BEF" x="undefined" y="undefined" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">4</text>
+	<text id="text_BF" x="170" y="390" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">152</text>
+	<text id="text_C" x="500" y="355" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">57</text>
+	<text id="text_CD" x="undefined" y="undefined" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">18</text>
+	<text id="text_CDE" x="420" y="410" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">3</text>
+	<text id="text_CDEF" x="undefined" y="undefined" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">1</text>
+	<text id="text_CDF" x="undefined" y="undefined" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">27</text>
+	<text id="text_CE" x="455" y="400" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">9</text>
+	<text id="text_CF" x="undefined" y="undefined" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">14</text>
+	<text id="text_D" x="undefined" y="undefined" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">149</text>
+	<text id="text_DE" x="undefined" y="undefined" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">7</text>
+	<text id="text_DEF" x="undefined" y="undefined" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">3</text>
+	<text id="text_DF" x="185" y="285.8274032617784" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">154</text>
+	<text id="text_E" x="440" y="435" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">98</text>
+	<text id="text_EF" x="undefined" y="undefined" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">10</text>
+	<text id="text_F" x="120" y="235" font-size="12px" font-family="Verdana" font-weight="bold" dominant-baseline="middle" text-anchor="middle" style="fill:#000000;cursor:move">820</text>
+</svg>
