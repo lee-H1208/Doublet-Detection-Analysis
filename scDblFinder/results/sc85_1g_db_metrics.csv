@@ -1,0 +1,15 @@
+,sc85_1g
+Number of cells,15830.0
+Number of genes,"36,530"
+Number of counts,"13,291,714"
+Mean counts per cell,840
+Filter genes:, 
+Number of genes removed,11479
+Doublet removal:, 
+Doublet percentage,16.84144030322173
+Number of cells removed,2666
+After doublet removal:, 
+Number of cells -db,13164
+Number of genes -db,25051
+Number of counts -db,13291714.0
+Mean counts per cell -db,585
