@@ -1,4 +1,4 @@
-# Doublet-Detection-Analysis
+# Doublet Detection Analysis
 
 ![Poster](URECA_Poster.jpg)
 
